@@ -1,0 +1,119 @@
+{
+	"info": {
+		"_postman_id": "8ed398cb-02ba-4b9c-94b0-b59dae1fb7b3",
+		"name": "Tools (RUNNER) Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "25080832",
+		"_collection_link": "https://blue-water-113734.postman.co/workspace/tools_project~633636f5-9587-4a4b-b1ec-473ce020cd8b/collection/25080832-8ed398cb-02ba-4b9c-94b0-b59dae1fb7b3?action=share&creator=25080832&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "Add User(RUNNER)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"ali\",\r\n    \"role\": \"Runner\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/task6/api/addUser"
+			},
+			"response": []
+		},
+		{
+			"name": "Add User(RUNNER)  2 (O)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"amr\",\r\n    \"role\": \"Runner\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/task6/api/addUser"
+			},
+			"response": []
+		},
+		{
+			"name": "Set Runner Fees",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"delivery_fees\": 10,\r\n    \"id\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/task6/api/setFees"
+			},
+			"response": []
+		},
+		{
+			"name": "Set Runner Fees 2 (O)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"delivery_fees\": 20,\r\n    \"id\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/task6/api/setFees"
+			},
+			"response": []
+		},
+		{
+			"name": "deliver Order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ouid\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/task6/api/deliverOrder"
+			},
+			"response": []
+		},
+		{
+			"name": "Check orders completed",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ouid\":2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/task6/api/checkCompleted"
+			},
+			"response": []
+		}
+	]
+}
