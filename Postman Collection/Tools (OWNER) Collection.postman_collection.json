@@ -1,0 +1,191 @@
+{
+	"info": {
+		"_postman_id": "351ad49a-0e4d-4b7a-ae22-dc8f23289ce4",
+		"name": "Tools (OWNER) Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "25080832",
+		"_collection_link": "https://blue-water-113734.postman.co/workspace/tools_project~633636f5-9587-4a4b-b1ec-473ce020cd8b/collection/25080832-351ad49a-0e4d-4b7a-ae22-dc8f23289ce4?action=share&creator=25080832&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "add User(OWNER)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"alaa\",\r\n    \"role\": \"Owner\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/task6/api/addUser"
+			},
+			"response": []
+		},
+		{
+			"name": "Add Restaurant 1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"restaurantOwnerId\": 1,\r\n    \"getRestaurantName\": \"mac2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/task6/api/addRestaurant"
+			},
+			"response": []
+		},
+		{
+			"name": "Add Restaurant",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"restaurantOwnerId\": 1,\r\n    \"getRestaurantName\": \"mac\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/task6/api/addRestaurant"
+			},
+			"response": []
+		},
+		{
+			"name": "Create Menu 1 (O)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ownerId\": 1,\r\n    \"restaurantId\": 1,\r\n    \"meals\":[\r\n        {\"name\": \"kofta\", \"price\": 15},\r\n        {\"name\": \"ma7shy\", \"price\": 20}        \r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/task6/api/createMenu"
+			},
+			"response": []
+		},
+		{
+			"name": "Create Menu 2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ownerId\": 1,\r\n    \"restaurantId\": 2,\r\n    \"meals\":[\r\n        {\"name\": \"banana\", \"price\": 15},\r\n        {\"name\": \"kantalob\", \"price\": 20},\r\n        {\"name\": \"grapes\", \"price\": 20},\r\n        {\"name\": \"batee5\", \"price\": 20}\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/task6/api/createMenu"
+			},
+			"response": []
+		},
+		{
+			"name": "Create Menu 2 (Additional)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ownerId\": 1,\r\n    \"restaurantId\": 2,\r\n    \"meals\":[\r\n        {\"name\": \"betengan\", \"price\": 15}      \r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/task6/api/createMenu"
+			},
+			"response": []
+		},
+		{
+			"name": "get Restaurant Menu",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"restaurantID\":2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/task6/api/getRestaurantMenu"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Restaurant Report",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ownerId\":1,\r\n    \"restaurantId\":2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/task6/api/restaurantReport"
+			},
+			"response": []
+		},
+		{
+			"name": "Update Menu",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ownerId\": 1,\r\n    \"restaurantId\": 2,\r\n    \"meals\":[\r\n        {\"name\": \"banana\", \"price\": 20},\r\n        {\"name\": \"ma7shy\", \"price\": 30}\r\n               \r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/task6/api/updateMenu"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Menu item",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ownerId\": 1,\r\n    \"restaurantId\": 1,\r\n    \"meals\":[\r\n        {\"name\": \"banana\", \"price\": 20}\r\n               \r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/task6/api/deleteRestaurantItem"
+			},
+			"response": []
+		}
+	]
+}
