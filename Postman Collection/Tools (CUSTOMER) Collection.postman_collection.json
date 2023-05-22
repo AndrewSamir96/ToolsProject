@@ -1,0 +1,137 @@
+{
+	"info": {
+		"_postman_id": "089d4197-5a69-49b4-b663-51ff6f1d46f4",
+		"name": "Tools (CUSTOMER) Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "25080832",
+		"_collection_link": "https://blue-water-113734.postman.co/workspace/tools_project~633636f5-9587-4a4b-b1ec-473ce020cd8b/collection/25080832-089d4197-5a69-49b4-b663-51ff6f1d46f4?action=share&creator=25080832&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "Add User(CUSTOMER)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"bahaa\",\r\n    \"role\": \"Customer\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/task6/api/addUser"
+			},
+			"response": []
+		},
+		{
+			"name": "Create Order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"restaurantName\": \"mac\",\r\n    \"userID\": 4,\r\n    \"meals\":[\r\n        {\"name\": \"banana\", \"price\": 15},\r\n        {\"name\": \"kantalob\", \"price\": 20}        \r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/task6/api/createOrder"
+			},
+			"response": []
+		},
+		{
+			"name": "Create Order 2(O)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"restaurantName\": \"mac\",\r\n    \"userID\": 4,\r\n    \"meals\":[\r\n        {\"name\": \"betengan\",\"price\": 15.0}       \r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/task6/api/createOrder"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Restaurant Names",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ouid\":4\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/task6/api/getRestaurantNames"
+			},
+			"response": []
+		},
+		{
+			"name": "List Order by ID",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ouid\":4\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/task6/api/listOrdersById"
+			},
+			"response": []
+		},
+		{
+			"name": "Update Order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customerId\":4,\r\n    \"orderId\":2,\r\n    \"meals\":[\r\n        {\"name\": \"banana\",\"price\": 15.0}       \r\n    ]\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/task6/api/updateOrder"
+			},
+			"response": []
+		},
+		{
+			"name": "Cancel order by ID",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customerId\":4,\r\n    \"orderId\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/task6/api/cancelOrder"
+			},
+			"response": []
+		}
+	]
+}
